@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/themeAlt"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/create_trip"
+        android:background="@drawable/circle"
+        android:layout_marginLeft="29dp"
+        android:layout_below="@+id/profile_photo"
+        android:layout_marginTop="60dp"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/create_trip_icon"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_alignTop="@+id/create_trip"
+        android:layout_alignLeft="@+id/create_trip"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/upcoming_booking"
+        android:background="@drawable/circle"
+        android:layout_alignTop="@+id/create_trip"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/upcoming_booking"
+        android:layout_alignLeft="@+id/upcoming_booking"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/upcoming_booking_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle"
+        android:id="@+id/onTrip"
+        android:layout_marginEnd="29dp"
+        android:layout_alignTop="@+id/upcoming_booking"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/onTrip"
+        android:layout_alignLeft="@+id/onTrip"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/onTrip_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/maintenance"
+        android:background="@drawable/circle"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/create_trip"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/maintenance"
+        android:layout_alignLeft="@+id/maintenance"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/maintenance_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/available"
+        android:background="@drawable/circle"
+        android:layout_alignTop="@+id/maintenance"
+        android:layout_alignStart="@+id/upcoming_booking" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/available"
+        android:layout_alignLeft="@+id/available"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/available_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/trips"
+        android:background="@drawable/circle"
+        android:layout_alignBottom="@+id/available"
+        android:layout_alignStart="@+id/onTrip" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/trips"
+        android:layout_alignLeft="@+id/trips"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/trips_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/my_account_info"
+        android:background="@drawable/circle"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/create_trip"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/my_account_info"
+        android:layout_alignLeft="@+id/my_account_info"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/my_account_info_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/my_bikes"
+        android:background="@drawable/circle"
+        android:layout_alignTop="@+id/my_account_info"
+        android:layout_alignStart="@+id/available" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/my_bikes"
+        android:layout_alignLeft="@+id/my_bikes"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/my_bikes_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/support"
+        android:background="@drawable/circle"
+        android:layout_alignBottom="@+id/my_bikes"
+        android:layout_alignStart="@+id/trips" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/support"
+        android:layout_alignLeft="@+id/support"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/support_icon" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Trip"
+        android:textSize="10dp"
+        android:padding="3dp"
+        android:textColor="@color/textColor"
+        android:id="@+id/textView4"
+        android:gravity="center"
+        android:layout_below="@+id/create_trip"
+        android:layout_alignStart="@+id/create_trip" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upcoming\r\nBookings"
+        android:padding="3dp"
+        android:textSize="10dp"
+        android:textColor="@color/textColor"
+        android:id="@+id/textView11"
+        android:gravity="center"
+        android:layout_below="@+id/upcoming_booking"
+        android:layout_alignStart="@+id/upcoming_booking" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bikes\r\nOn Trip"
+        android:id="@+id/textView12"
+        android:padding="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/onTrip"
+        android:layout_alignStart="@+id/onTrip" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maintenance"
+        android:id="@+id/textView13"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="@color/textColor"
+        android:layout_below="@+id/maintenance"
+        android:layout_alignLeft="@+id/maintenance" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available\r\nBikes"
+        android:textColor="@color/textColor"
+        android:textSize="10dp"
+        android:padding="3dp"
+        android:id="@+id/textView14"
+        android:gravity="center"
+        android:layout_below="@+id/available"
+        android:layout_alignStart="@+id/available" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="Trip\r\nHistory"
+        android:padding="3dp"
+        android:textColor="@color/textColor"
+        android:id="@+id/textView15"
+        android:gravity="center"
+        android:layout_below="@+id/trips"
+        android:layout_alignStart="@+id/trips" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="My Account"
+        android:padding="3dp"
+        android:textColor="@color/textColor"
+        android:id="@+id/textView16"
+        android:gravity="center"
+        android:layout_below="@+id/my_account_info"
+        android:layout_alignStart="@+id/my_account_info" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:padding="3dp"
+        android:text="My Bikes"
+        android:textColor="@color/textColor"
+        android:id="@+id/textView17"
+        android:gravity="center"
+        android:layout_below="@+id/my_bikes"
+        android:layout_alignStart="@+id/my_bikes" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="Support"
+        android:textColor="@color/textColor"
+        android:padding="3dp"
+        android:id="@+id/textView18"
+        android:gravity="center"
+        android:layout_below="@+id/support"
+        android:layout_alignEnd="@+id/support"
+        android:layout_alignStart="@+id/support" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/profile_plus_sign"
+        android:id="@+id/profile_photo"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/profile_add"
+        android:background="@drawable/profile_plus_sign"
+        android:layout_alignBottom="@+id/profile_photo"
+        android:layout_alignEnd="@+id/profile_photo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Hi Guest"
+        android:textStyle="bold"
+        android:id="@+id/name"
+        android:textColor="@color/textColor"
+        android:gravity="center"
+        android:layout_below="@+id/profile_photo"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOG OUT"
+        android:background="@color/themeAlt"
+        android:id="@+id/logOut"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/textColor"/>
+
+</RelativeLayout>
