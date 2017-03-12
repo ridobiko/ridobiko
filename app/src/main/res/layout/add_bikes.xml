@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/add_Bike_Button_layout"
+        android:layout_below="@+id/toolbar"
+        android:foregroundGravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="25dp"
+            android:id="@+id/add_bike_layout"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="ADD BIKES"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/bike_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                   android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Bike Name"
+                    android:textColor="@color/themeDark"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/bike_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/box_border"
+                    android:ems="5"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Bike Plate Number"
+                    android:textColor="@color/themeDark"
+
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/bike_plate_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_margin="10dp"
+                    android:background="@drawable/box_border"
+                    android:ems="5"
+                    android:inputType="textCapCharacters"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Bike Plate Type"
+                    android:textColor="@color/themeDark"
+
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/box_border">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                       android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Rent Per Day"
+                    android:textColor="@color/themeDark"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/bike_rent_per_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/box_border"
+                    android:ems="5"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Rent Per Hour"
+                    android:textColor="@color/themeDark"
+                    android:textSize="20sp" />
+
+
+
+                <EditText
+                    android:id="@+id/bike_rent_per_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/box_border"
+                    android:ems="5"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/box_border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Upload Image"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Insurance Renewal Date"
+                    android:textColor="@color/themeDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/select_insurance_renewal_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/box_border"
+                    android:text="tap to select"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Periodic Service Date"
+                    android:textColor="@color/themeDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/select_service_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/box_border"
+                    android:text="tap to select"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Service Renewal Month"
+                    android:textColor="@color/themeDark"
+
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/box_border">
+
+                    <Spinner
+                        android:id="@+id/periodic_service_renewal_date"
+                        android:layout_width="match_parent"
+                        android:padding="10dp"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+   android:layout_alignParentBottom="true"
+    android:id="@+id/add_Bike_Button_layout"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/textColor"
+
+        android:textSize="25sp"
+        android:layout_height="50dp"
+        android:text="Add Bike" />
+</LinearLayout>
+
+
+</RelativeLayout>

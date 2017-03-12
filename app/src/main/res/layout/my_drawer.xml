@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@color/themeAlt"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:layout_width="50dp"
@@ -155,7 +158,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/support"
+        android:id="@+id/add_bikes"
         android:background="@drawable/circle"
         android:layout_alignBottom="@+id/my_bikes"
         android:layout_alignStart="@+id/trips" />
@@ -163,12 +166,31 @@
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_alignTop="@+id/support"
-        android:layout_alignLeft="@+id/support"
+        android:layout_alignTop="@+id/add_bikes"
+        android:layout_alignLeft="@+id/add_bikes"
         android:src="@drawable/profile_plus_sign"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
-        android:id="@+id/support_icon" />
+        android:id="@+id/add_bikes_icon" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/get_support"
+        android:background="@drawable/circle"
+        android:layout_below="@+id/textView16"
+        android:layout_alignStart="@+id/my_account_info"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/get_support"
+        android:layout_alignLeft="@+id/get_support"
+        android:src="@drawable/profile_plus_sign"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/get_support_icon" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -266,14 +288,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="10dp"
-        android:text="Support"
+        android:text="Add Bikes"
         android:textColor="@color/textColor"
         android:padding="3dp"
         android:id="@+id/textView18"
         android:gravity="center"
-        android:layout_below="@+id/support"
-        android:layout_alignEnd="@+id/support"
-        android:layout_alignStart="@+id/support" />
+        android:layout_below="@+id/add_bikes"
+        android:layout_alignEnd="@+id/add_bikes"
+        android:layout_alignStart="@+id/add_bikes" />
 
     <ImageView
         android:layout_width="100dp"
@@ -303,7 +325,18 @@
         android:gravity="center"
         android:layout_below="@+id/profile_photo"
         android:layout_centerHorizontal="true" />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="Support"
+        android:padding="3dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/textColor"
+        android:id="@+id/textView20"
+        android:gravity="center"
+        android:layout_below="@+id/get_support"
+        android:layout_alignStart="@+id/get_support" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

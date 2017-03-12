@@ -1,18 +1,14 @@
 package com.example.ritik.instabike;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.Gravity;
 import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -45,7 +41,8 @@ public class MainPage extends AppCompatActivity {
         ImageView tripHistory =(ImageView)findViewById(R.id.trips);
         ImageView myAccount =(ImageView)findViewById(R.id.my_account_info);
         ImageView myBikes =(ImageView)findViewById(R.id.my_bikes);
-        ImageView support =(ImageView)findViewById(R.id.support);
+        ImageView support =(ImageView)findViewById(R.id.get_support);
+        ImageView addBikes =(ImageView)findViewById(R.id.add_bikes);
         ImageView profilePic =(ImageView)findViewById(R.id.profile_photo);
         ImageView addProfilePhoto=(ImageView)findViewById(R.id.profile_add);
         Button logout =(Button)findViewById(R.id.logOut);
@@ -96,6 +93,15 @@ public class MainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "MyBikes", Toast.LENGTH_SHORT).show();
+            }
+        });
+        addBikes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), add_bikes.class);
+                startActivity(intent);
+                overridePendingTransition( R.anim.slide_out, R.anim.slide_in);
+                // Toast.makeText(getApplicationContext(), "Add Bikes", Toast.LENGTH_SHORT).show();
             }
         });
         support.setOnClickListener(new View.OnClickListener() {
