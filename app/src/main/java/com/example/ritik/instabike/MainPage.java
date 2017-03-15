@@ -92,6 +92,9 @@ public class MainPage extends AppCompatActivity {
         myBikes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), my_bikes.class);
+                startActivity(intent);
+                overridePendingTransition( R.anim.slide_out, R.anim.slide_in);
                 Toast.makeText(getApplicationContext(), "MyBikes", Toast.LENGTH_SHORT).show();
             }
         });
@@ -125,6 +128,7 @@ public class MainPage extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Toast.makeText(getApplicationContext(), "LogOut", Toast.LENGTH_SHORT).show();
             }
         });
