@@ -208,7 +208,7 @@ public class add_bikes extends AppCompatActivity implements com.wdullaer.materia
                 e.printStackTrace();
             }
             if(bitmap_s!=null){
-                new encode_image_to_base64().execute(bitmap_s);
+                new encode_image_to_base64().execute();
             }
             else
                 Toast.makeText(add_bikes.this,"Can't Upload Image",Toast.LENGTH_SHORT).show();
