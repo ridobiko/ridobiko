@@ -40,7 +40,7 @@ public class my_bikes extends AppCompatActivity {
 
 
       list_bikes=(ListView)findViewById(R.id.my_bikes_list);
-    //  list_bikes.setAdapter(new ridobiko_adapter(this));
+    // list_bikes.setAdapter(new ridobiko_adapter(this));
 
 
 
