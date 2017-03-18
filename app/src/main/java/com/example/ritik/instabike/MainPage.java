@@ -80,7 +80,11 @@ public class MainPage extends AppCompatActivity {
         tripHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "TripHistory", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(), trip_history.class);
+                startActivity(intent);
+                overridePendingTransition( R.anim.slide_out, R.anim.slide_in);
+              //  Toast.makeText(getApplicationContext(), "TripHistory", Toast.LENGTH_SHORT).show();
             }
         });
         myAccount.setOnClickListener(new View.OnClickListener() {
