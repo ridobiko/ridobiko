@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#990000</color>
     <color name="colorPrimaryDark">#b30000</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#b30000</color>
     <color name="circleColor">#ffffff</color>
     <color name="themeColor">#eb1e29</color>
     <color name="themeAlt">#990000</color>

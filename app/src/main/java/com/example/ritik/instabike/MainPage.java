@@ -90,6 +90,8 @@ public class MainPage extends AppCompatActivity {
         myAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), t_history_details.class);
+//                startActivity(intent);
                 Toast.makeText(getApplicationContext(), "MyAccount", Toast.LENGTH_SHORT).show();
             }
         });
