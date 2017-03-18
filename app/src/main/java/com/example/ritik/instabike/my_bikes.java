@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -36,11 +37,11 @@ public class my_bikes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_bikes_activity);
 
-        load_data();
+      //  load_data();
 
 
       list_bikes=(ListView)findViewById(R.id.my_bikes_list);
-    // list_bikes.setAdapter(new ridobiko_adapter(this));
+    list_bikes.setAdapter(new ridobiko_adapter(this));
 
 
 
@@ -132,14 +133,14 @@ class ridobiko_adapter extends BaseAdapter {
     ridobiko_adapter(Context c){
         context=c;
         list =new ArrayList<single_row>();
-//        Resources res=context.getResources();
-//        String[] bike=res.getStringArray(R.array.bikeName);
-//        String[] bikePlate=res.getStringArray(R.array.bikePlateNo);
+        Resources res=context.getResources();
+        String[] bike=res.getStringArray(R.array.bikeName);
+        String[] bikePlate=res.getStringArray(R.array.bikePlateNo);
         int[] image={R.drawable.bike_image,R.drawable.bike_image,R.drawable.bike_image,R.drawable.bike_image,R.drawable.bike_image
                 ,R.drawable.bike_image,R.drawable.bike_image,R.drawable.bike_image,R.drawable.bike_image,R.drawable.bike_image};
 
         for (int i=0;i<10;i++){
-             list.add(new single_row(bike_name_array[i],bike_plate_no_array[i],image[i]));
+             list.add(new single_row(bike[i],bikePlate[i],image[i]));
           }
     }
 
@@ -173,6 +174,7 @@ class ridobiko_adapter extends BaseAdapter {
         ImageView bikeImage=(ImageView)row.findViewById(R.id.imageViewBikeImage);
         Button detailsButt=(Button)row.findViewById(R.id.bike_info_butt);
         Button deleteButt=(Button)row.findViewById(R.id.delete_bike_butt);
+
         single_row temp=list.get(i);
         bike_name.setText(temp.bike_name_row);
         bike_plate_no.setText(temp.bike_plate_no_row);

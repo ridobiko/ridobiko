@@ -1,5 +1,4 @@
 package com.example.ritik.instabike;
-// TODO jjhkhkhsfhsnfdkfjfkjflkjsajljdjflajljla
 
 import android.app.ProgressDialog;
 import android.content.Context;
