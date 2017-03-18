@@ -29,9 +29,13 @@
             android:name=".my_bikes"
             android:label="@string/title_activity_my_bikes"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".trip_history"
-            android:theme="@style/AppTheme.NoActionBar"
-            ></activity>
+        <activity
+            android:name=".trip_history"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".t_history_details"
+            android:label="@string/title_activity_t_history"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

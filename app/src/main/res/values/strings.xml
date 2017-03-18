@@ -6,4 +6,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_my_bikes">my_bikes</string>
+    <string name="title_activity_trip_history_details">trip_history_details</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_t_history">t_history</string>
 </resources>
