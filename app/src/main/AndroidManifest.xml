@@ -36,6 +36,16 @@
             android:name=".t_history_details"
             android:label="@string/title_activity_t_history"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-    </application>
+
+    <activity
+        android:name=".upcoming_booking"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".upcoming_booking_details"
+        android:label="@string/title_activity_t_history"
+        android:theme="@style/AppTheme.NoActionBar">
+
+    </activity>
+</application>
 
 </manifest>

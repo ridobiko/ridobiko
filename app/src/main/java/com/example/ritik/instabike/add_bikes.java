@@ -32,7 +32,7 @@ import java.util.Calendar;
 
 public class add_bikes extends AppCompatActivity implements com.wdullaer.materialdatetimepicker.date.DatePickerDialog.OnDateSetListener {
     String bike_names=null, bike_plate_no=null, bike_plate_type_data=null;
-    String rent_per_day=null, rent_per_hour=null, service_renewal_month_data=null;
+    String rent_per_day=null, rent_per_hour=null, service_renewal_month_data=null,bike_brand;
     Button add_bike_butt;
     private static final int PICK_IMAGE = 1;
     Uri imageUri=null;
@@ -96,6 +96,26 @@ public class add_bikes extends AppCompatActivity implements com.wdullaer.materia
             }
         });
 
+        Spinner spinner_bike_brand = (Spinner) findViewById(R.id.bike_brand_spinner);
+        ArrayAdapter<CharSequence> spinner_bike_brand_adapter = ArrayAdapter.createFromResource(this,
+                R.array.bikeBrandArray, android.R.layout.simple_spinner_item);
+        spinner_bike_brand_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_bike_brand.setAdapter(spinner_bike_brand_adapter);
+
+
+        spinner_bike_brand.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                bike_brand = String.valueOf(adapterView.getItemAtPosition(i));
+                Toast.makeText(add_bikes.this, "" + bike_brand, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(add_bikes.this, "Nothing Selected", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
 
@@ -112,7 +132,8 @@ public class add_bikes extends AppCompatActivity implements com.wdullaer.materia
             public void onClick(View view) {
 
                 Calendar now = Calendar.getInstance();
-                com.wdullaer.materialdatetimepicker.date.DatePickerDialog dpd = com.wdullaer.materialdatetimepicker.date.DatePickerDialog.newInstance(
+                com.wdullaer.materialdatetimepicker.date.DatePickerDialog dpd =
+                        com.wdullaer.materialdatetimepicker.date.DatePickerDialog.newInstance(
                         add_bikes.this,
                         now.get(Calendar.YEAR),
                         now.get(Calendar.MONTH),
