@@ -21,7 +21,7 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
         ImageView openDrawer =(ImageView)findViewById(R.id.open_drawer);
         ImageView notification=(ImageView)findViewById(R.id.notification);
-// Ridobiko
+
      final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
 
@@ -56,7 +56,9 @@ public class MainPage extends AppCompatActivity {
         upcomingBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "BookedBikes", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), upcoming_booking.class);
+                startActivity(intent);
+                overridePendingTransition( R.anim.slide_out, R.anim.slide_in);
             }
         });
         onTripBikes.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +86,6 @@ public class MainPage extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), trip_history.class);
                 startActivity(intent);
                 overridePendingTransition( R.anim.slide_out, R.anim.slide_in);
-              //  Toast.makeText(getApplicationContext(), "TripHistory", Toast.LENGTH_SHORT).show();
             }
         });
         myAccount.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +111,6 @@ public class MainPage extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), add_bikes.class);
                 startActivity(intent);
                 overridePendingTransition( R.anim.slide_out, R.anim.slide_in);
-                // Toast.makeText(getApplicationContext(), "Add Bikes", Toast.LENGTH_SHORT).show();
             }
         });
         support.setOnClickListener(new View.OnClickListener() {
