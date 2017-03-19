@@ -95,7 +95,7 @@ public class add_bikes extends AppCompatActivity implements com.wdullaer.materia
                 Toast.makeText(add_bikes.this, "Nothing Selected", Toast.LENGTH_SHORT).show();
             }
         });
-
+       // bike_brand_spinner
         Spinner spinner_bike_brand = (Spinner) findViewById(R.id.bike_brand_spinner);
         ArrayAdapter<CharSequence> spinner_bike_brand_adapter = ArrayAdapter.createFromResource(this,
                 R.array.bikeBrandArray, android.R.layout.simple_spinner_item);
