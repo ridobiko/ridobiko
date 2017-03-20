@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context="com.example.ritik.instabike.Bikes_On_Trip">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/themeAlt"
+            android:gravity="center"
+            android:layout_weight="30"
+            android:layout_height="60dp">
+
+
+
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
+                app:srcCompat="@drawable/app_logo"
+                android:layout_alignBottom="@+id/open_drawer"
+                android:layout_centerHorizontal="true" />
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+
+            android:layout_weight="70"
+            android:background="@color/themeAlt"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_margin="30dp"
+                android:layout_gravity="center_horizontal">
+
+
+
+                <android.support.design.widget.TextInputLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:hint="Email"
+                        android:textColor="#ffffff"
+
+                        android:textColorHint="#ffffff"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:id="@+id/editText3" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="Password"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff"
+                        android:ems="10"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:id="@+id/editText4" />
+                </android.support.design.widget.TextInputLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:background="#ffffff"
+                    android:id="@+id/button3" />
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

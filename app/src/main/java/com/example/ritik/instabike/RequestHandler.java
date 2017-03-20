@@ -1,5 +1,7 @@
 package com.example.ritik.instabike;
 
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -15,7 +17,8 @@ import java.util.Map;
 import javax.net.ssl.HttpsURLConnection;
 
 
-public class Request_Handler {
+public class RequestHandler {
+
     //Method to send httpPostRequest
     //This method is taking two arguments
     //First argument is the URL of the script to which we will send the request
@@ -35,8 +38,8 @@ public class Request_Handler {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
             //Configuring connection properties
-            conn.setReadTimeout(10000);
-            conn.setConnectTimeout(10000);
+            conn.setReadTimeout(15000);
+            conn.setConnectTimeout(15000);
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
             conn.setDoOutput(true);
@@ -53,6 +56,46 @@ public class Request_Handler {
             writer.flush();
             writer.close();
             os.close();
+            int responseCode = conn.getResponseCode();
+
+            if (responseCode == HttpsURLConnection.HTTP_OK) {
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                sb = new StringBuilder();
+                String response;
+                //Reading server response
+                while ((response = br.readLine()) != null){
+                    sb.append(response);
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
+    public String sendPostRequest(String requestURL) {
+        //Creating a URL
+        URL url;
+
+        //StringBuilder object to store the message retrieved from the server
+        StringBuilder sb = new StringBuilder();
+        try {
+            //Initializing Url
+            url = new URL(requestURL);
+
+            //Creating an httmlurl connection
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+            //Configuring connection properties
+            conn.setReadTimeout(15000);
+            conn.setConnectTimeout(15000);
+            conn.setRequestMethod("POST");
+            conn.setDoInput(true);
+            conn.setDoOutput(true);
+
+
+
             int responseCode = conn.getResponseCode();
 
             if (responseCode == HttpsURLConnection.HTTP_OK) {
@@ -90,5 +133,4 @@ public class Request_Handler {
 
         return result.toString();
     }
-
 }

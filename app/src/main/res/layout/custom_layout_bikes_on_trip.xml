@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:layout_width="match_parent"
+
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="33"
+
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:weightSum="100"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:hint="Bikes Name"
+            android:padding="2dp"
+            android:textSize="20dp"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="#33CC33" />
+        <TextView
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bikes Id"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_weight="50"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="33"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:weightSum="100"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:hint=" Name"
+                android:padding="2dp"
+                android:textSize="20dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:textColor="#33CC33" />
+            <TextView
+                android:id="@+id/item4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Id"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_weight="50"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="33"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/available"
+                android:text="Available"
+                android:background="@color/themeAlt"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:text="Maintaince"
+                android:id="@+id/maintenance"
+                android:background="@color/themeAlt"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
